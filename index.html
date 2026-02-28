@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfernoVerse | Creators of Ultimate Fire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: #0a0a1a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.3);
+        }
+
+        .nav-logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #FF6B35;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 5%;
+            background: radial-gradient(circle at center, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+        }
+
+        .hero-logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 30px rgba(255, 107, 53, 0.5));
+        }
+
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #FF6B35, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #b8b8d1;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 15px 40px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #FF6B35, #ff8c42);
+            color: white;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid #9B59B6;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(155, 89, 182, 0.2);
+        }
+
+        /* Game Section */
+        .game-section {
+            padding: 100px 5%;
+            background: linear-gradient(180deg, transparent 0%, rgba(155, 89, 182, 0.1) 50%, transparent 100%);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #FF6B35;
+        }
+
+        .game-card {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+        }
+
+        .game-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+        }
+
+        .game-card p {
+            color: #b8b8d1;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .features-list {
+            list-style: none;
+            text-align: left;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .features-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #ffffff;
+            font-size: 1.1rem;
+        }
+
+        .features-list li:before {
+            content: '🔥';
+            position: absolute;
+            left: 0;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 2;
+            color: #b8b8d1;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .social-links a {
+            color: #b8b8d1;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            color: #FF6B35;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.5rem; }
+            .game-card { padding: 30px; }
+            .game-card h3 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <img src="logo.png" alt="InfernoVerse" class="nav-logo">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#game">Game</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            <img src="logo.png" alt="InfernoVerse Logo" class="hero-logo">
+            <h1>Welcome to InfernoVerse</h1>
+            <p>Creators of Ultimate Fire. We forge immersive gaming experiences where passion meets precision.</p>
+            <a href="#game" class="btn btn-primary">Play Ultimate Fire</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Game Section -->
+    <section class="game-section" id="game">
+        <h2 class="section-title">Our Latest Release</h2>
+        <div class="game-card">
+            <h3>ULTIMATE FIRE</h3>
+            <p>Enter a universe where flames dance across galaxies. Ultimate Fire combines intense tactical combat with breathtaking cosmic landscapes, creating an experience that transcends traditional gaming boundaries.</p>
+            <ul class="features-list">
+                <li>Intense 5v5 tactical fire combat</li>
+                <li>Dynamic cosmic battlegrounds</li>
+                <li>Deep character customization</li>
+                <li>Cross-platform esports tournaments</li>
+                <li>Available on PC, PlayStation, Xbox & Mobile</li>
+            </ul>
+            <a href="#" class="btn btn-primary">Download Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="section-title">About InfernoVerse</h2>
+        <p>Founded in 2024, InfernoVerse began with a simple belief: games should burn with passion. What started as a small team of dreamers has evolved into a studio dedicated to creating unforgettable gaming experiences. Ultimate Fire is just the beginning—our universe is expanding.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <img src="logo.png" alt="InfernoVerse" class="footer-logo">
+        <p>Creators of Ultimate Fire</p>
+        <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">Discord</a>
+            <a href="#">YouTube</a>
+            <a href="#">Twitch</a>
+        </div>
+        <p style="color: #b8b8d1; font-size: 0.9rem; margin-top: 20px;">© 2024 InfernoVerse. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
